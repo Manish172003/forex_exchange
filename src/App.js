@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "../src/design/Navbar";
+import ConversionCounter from "../src/pages/ConversionCounter";
+import Home from "../src/pages/Home";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import RateChart from "../src/pages/RateChart";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route exact path="/conversion" element={<ConversionCounter />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/charts" element={<RateChart/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
