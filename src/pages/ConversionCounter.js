@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Alert from "../design/Alert";
-import img from "../images/new3.png";
+import img from "../images/home.jpg";
 
 function ConversionCounter() {
   const [options, setOptions] = useState([]);
@@ -17,7 +17,7 @@ function ConversionCounter() {
     const selectedValue = event.target.value;
     setSource(selectedValue);
     setfinal("0.0");
-    console.log("Selected Value:", selectedValue);
+    
   };
 
   const handleSelectChange1 = (event) => {
@@ -25,7 +25,7 @@ function ConversionCounter() {
     const selectedValue = event.target.value;
     setDest(selectedValue);
     setfinal("0.0");
-    console.log("Selected Value:", selectedValue);
+ 
   };
 
   const option = {
@@ -54,7 +54,7 @@ function ConversionCounter() {
   const optionsFixing = async () => {
     try {
       const response = await axios.request(option);
-      console.log(response.data);
+      // console.log(response.data);
       setOptions(response.data);
       const countryCodes = response.data;
       const modifiedCountryCodes = countryCodes.map((countryCode) =>

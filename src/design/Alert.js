@@ -4,7 +4,7 @@ const Alert = ({message}) => {
   return (
     <div
       id="alert-border-3"
-      class="flex items-center p-4 mb-4 text-green-800 border-t-4 border-green-300 bg-green-50 dark:text-green-400 dark:bg-gray-800 dark:border-green-800"
+      class="flex items-center p-4 mb-4 text-red-800 border-t-4 border-red-700 bg-red-50 dark:text-red-400 dark:bg-red-800 dark:border-red-800"
       role="alert"
     >
       <svg
